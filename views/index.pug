@@ -11,3 +11,10 @@ html
         else
             p Message: no message defined.
         include list.pug
+
+        mixin list(name, items)
+            ul= name
+                each item in items
+                    li= item
+        - var list = ['chicken wings', 'nachos', 'tacos', 'suhsi']
+        +list('Some foods', list)
