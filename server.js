@@ -6,7 +6,8 @@ var app = express();
 app.engine('pug', require('pug').__express)
 app.set('views', './views');
 app.set('view engine', 'pug');
- 
+app.use(express.static(__dirname + '/public'));
+
 // Routes
 app.get('/', function (req, res) {
  

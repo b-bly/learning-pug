@@ -1,1 +1,13 @@
-h1 Hello world
+doctype html
+html
+    head
+        title My Site
+        script(type='text/javascript' src='/script.js')
+    body
+        - var message = 'What a great template engine'
+        h1 Hello world
+        if message
+            p Message: #{message}
+        else
+            p Message: no message defined.
+        include list.pug
